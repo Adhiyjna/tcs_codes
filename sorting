@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+    char string[100];
+    printf("enter the string");
+    scanf("%s",string);
+    
+    int n = strlen(string);
+    for(int i=0;i<n-1;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(string[i]>string[j])
+            {
+                int temp = string[i];
+                string[i] = string[j];
+                string[j] = temp;
+            }
+        }
+    }
+    
+    printf("the lexical ordered string is");
+    printf("%s",string);
+    
+}
