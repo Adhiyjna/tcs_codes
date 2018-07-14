@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char string[30];
+    int n;
+    printf("enter the no of characters");
+    scanf("%d",&n);
+    
+    printf("enter the string:");
+    scanf("%s",string);
+    
+    int count=0;
+    
+    while(count<n)
+    {
+        printf("%c = %d \n",string[count],string[count]);
+        count++;
+    }
+}
