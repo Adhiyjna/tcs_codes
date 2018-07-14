@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main()
+{
+    char str[100];
+    int i;
+    printf("enter the string");
+    scanf("%s",str);
+    int count;
+    for(i=0;str[i]!=0;i++)
+    {
+        count++;
+    }
+   int flag,j;
+   for(i=0;i<count;i++)
+   {
+       flag=0;
+       for(j=i+1;j<count;j++)
+       {
+       if( str[i]==str[j])
+       {
+           str[i]='\0';
+       }
+       }
+       printf("%c",str[i]);
+   }
+   
+}
