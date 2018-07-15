@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[300];int i;
+    char ch;
+    char rtr[300];
+    printf("enter the string");
+    scanf("%s",str);
+
+    strcpy(rtr,str);
+
+    int l = strlen(str);
+
+    for(i=0;i<l/2;i++)
+    {
+        ch = str[i];
+        str[i]=str[l-1-i];
+        str[l-i-1]=ch;
+    }
+
+    printf("reversed string %s \n",str);
+
+    if(strcmp(str,rtr)==0)
+    {
+        printf("palindrome");
+    }
+    else
+    {
+
+        printf("not a palindrome");
+    }
+    /*int count=0;
+    for(i=0;str[i]!=0;i++)
+        count++;
+/*
+count the number of characters
+    for(i=0;str[i]!='\0';i++)
+    {
+        count++;
+    }
+
+    printf("%d",count);
+ */
+/*
+ for(i=0;i<count/2;i++)
+ {
+
+     char ch = str[i];
+     str[i] = str[count-1-i];
+     str[count-1-i]=ch;
+ }
+ printf("%s",str);
+*/
+}
